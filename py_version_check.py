@@ -7,6 +7,4 @@ def pad_version(v):
     return padded
 
 def minor_version(v1, v2):
-    #print("Pad V1:", pad_version(v1))
-    #print("Pad V2:", pad_version(v2))
     return pad_version(v1) < pad_version(v2)
