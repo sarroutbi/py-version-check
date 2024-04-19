@@ -1,6 +1,5 @@
 import unittest
-
-from py_version_check import minor_version
+from py_version_check import *
 
 class TestVersions(unittest.TestCase):
 
@@ -18,6 +17,12 @@ class TestVersions(unittest.TestCase):
 
     def test_minor_normal5(self):
         self.assertEqual(minor_version("0.1.0", "0.1.0"), False)
+
+    def test_major_normal1(self):
+        self.assertEqual(major_version("0.1.0", "0.1.0"), False)
+
+    def test_equal_normal1(self):
+        self.assertEqual(equal_version("0.1.0", "0.1.0"), True)
 
     def test_minor_tricky1(self):
         self.assertEqual(minor_version("01.0", "010.0"), True)
