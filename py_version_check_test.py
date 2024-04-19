@@ -24,6 +24,15 @@ class TestVersions(unittest.TestCase):
     def test_equal_normal1(self):
         self.assertEqual(equal_version("0.1.0", "0.1.0"), True)
 
+    def test_equal_normal2(self):
+        self.assertEqual(equal_version("0.10.0", "0.010.0"), True)
+
+    def test_equal_normal3(self):
+        self.assertEqual(equal_version("10.0", "0.10"), False)
+
+    def test_equal_normal4(self):
+        self.assertEqual(equal_version("10.0", "10.0.0"), False)
+
     def test_minor_tricky1(self):
         self.assertEqual(minor_version("01.0", "010.0"), True)
 
