@@ -22,5 +22,8 @@ class TestVersions(unittest.TestCase):
     def test_minor_tricky3(self):
         self.assertEqual(minor_version("01.0", "00002.010.0"), True)
 
+    def test_minor_tricky4(self):
+        self.assertEqual(minor_version("01.0", str(0.1)), False)
+
 if __name__ == '__main__':
     unittest.main()
