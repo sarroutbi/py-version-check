@@ -1,7 +1,7 @@
 def pad_version(v):
     l = v.split(".")
     padded = ""
-    for i, v in enumerate(l):
+    for v in l:
         padded += v.rjust(10, "0")
         padded += "."
     return padded
